@@ -10,6 +10,7 @@ namespace AzureOpenAIConsoleApp
         {
             var endpoint = "replace-with-your-open-ai-service-url";
             var key = "replace-with-your-open-ai-service-key";
+            var model = "replace-with-your-model-name";
 
             if (string.IsNullOrEmpty(endpoint))
             {
@@ -28,7 +29,7 @@ namespace AzureOpenAIConsoleApp
             AzureOpenAIClient azureClient = new(new Uri(endpoint), credential);
 
             // Initialize the ChatClient with the specified deployment name
-            ChatClient chatClient = azureClient.GetChatClient("gpt-35-turbo-target-crm");
+            ChatClient chatClient = azureClient.GetChatClient(model);
 
             // Create a list of chat messages
             Console.WriteLine("You own AI chat model.....\n\n");

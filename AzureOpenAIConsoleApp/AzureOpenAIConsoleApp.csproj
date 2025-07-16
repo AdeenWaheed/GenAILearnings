@@ -8,14 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Demo\**" />
+    <EmbeddedResource Remove="Demo\**" />
+    <None Remove="Demo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
     <PackageReference Include="Azure.Core" Version="1.45.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Demo\" />
   </ItemGroup>
 
 </Project>
